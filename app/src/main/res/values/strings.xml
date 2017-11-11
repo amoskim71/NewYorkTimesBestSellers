@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">One20</string>
+    <string name="app_name">covr</string>
     <string name="api_key">GFOHEDALKDKE7GCPNLGE2QEIGFREOEUF</string>
+    <string name="base_url">https://calendly.com/</string>
+
+
 </resources>
