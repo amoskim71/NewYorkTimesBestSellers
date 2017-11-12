@@ -13,6 +13,6 @@ public interface BooksApi {
 
     //get best seller list
     @GET("overview.json")
-    Call<OverviewRepository> getOverview();
+    Call<OverviewResponse> getOverview();
 
 }
