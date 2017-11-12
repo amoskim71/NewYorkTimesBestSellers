@@ -29,5 +29,6 @@ public class NewYorkTimesClient {
             .build();
 
     BooksApi bookServiceApi = retrofit.create(BooksApi.class);
-    Observable<OverviewResponse> overviewResponseObservable = bookServiceApi.getOverview();
+   // Observable<OverviewResponse> overviewResponseObservable = bookServiceApi.getOverview();
+
 }
