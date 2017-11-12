@@ -1,5 +1,8 @@
 package com.disruptmidwest.one20.networking;
 
+import com.disruptmidwest.one20.model.OverviewResponse;
+
+import io.reactivex.Observable;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -26,5 +29,5 @@ public class NewYorkTimesClient {
             .build();
 
     BooksApi bookServiceApi = retrofit.create(BooksApi.class);
-
+    Observable<OverviewResponse> overviewResponseObservable = bookServiceApi.getOverview();
 }
