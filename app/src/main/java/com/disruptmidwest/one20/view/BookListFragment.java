@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 
 import com.disruptmidwest.one20.R;
 
-public class BookFragment extends Fragment {
-    
-    public BookFragment() {
+public class BookListFragment extends Fragment {
+
+    public static final String TAG = "BookListFragment";
+
+    public BookListFragment() {
         // Required empty public constructor
     }
 
