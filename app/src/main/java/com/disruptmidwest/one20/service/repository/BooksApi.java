@@ -1,6 +1,6 @@
-package com.disruptmidwest.one20.networking;
+package com.disruptmidwest.one20.service.repository;
 
-import com.disruptmidwest.one20.model.OverviewResponse;
+import com.disruptmidwest.one20.service.model.OverviewResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -10,6 +10,8 @@ import retrofit2.http.GET;
  */
 
 public interface BooksApi {
+
+    String URL = "http://BooksApi.nytimes.com/svc/books/v3/lists";
 
     //get best seller list
     @GET("overview.json")

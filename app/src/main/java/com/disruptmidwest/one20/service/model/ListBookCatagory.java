@@ -1,7 +1,9 @@
-package com.disruptmidwest.one20.model;
+package com.disruptmidwest.one20.service.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 /**
  * Created by root on 11/12/17.
@@ -9,10 +11,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class ListBookCatagory {
 
-        @SerializedName("list_id")
-        @Expose
-        private int listId;
-        @SerializedName("list_name")
+    @SerializedName("list_id")
+    @Expose
+    private int listId;
+
+    @SerializedName("list_name")
+    @Expose
+    private String listName;
+/*        @SerializedName("list_name")
         @Expose
         private String listName;
         @SerializedName("list_name_encoded")
@@ -30,19 +36,34 @@ public class ListBookCatagory {
         @SerializedName("list_image_width")
         @Expose
         private int listImageWidth;
+
+
         @SerializedName("list_image_height")
         @Expose
-        private int listImageHeight;
+        private int listImageHeight;*/
 
-        public int getListId() {
-            return listId;
-        }
+    @SerializedName("books")
+    @Expose
+    public List<Books> booksInCatagory;
 
-        public void setListId(int listId) {
-            this.listId = listId;
-        }
 
-        public String getListName() {
+    public String getListName() {
+        return listName;
+    }
+
+    public void setListName(String listName) {
+        this.listName = listName;
+    }
+
+    public int getListId() {
+        return listId;
+    }
+
+    public void setListId(int listId) {
+        this.listId = listId;
+    }
+
+      /*  public String getListName() {
             return listName;
         }
 
@@ -97,6 +118,6 @@ public class ListBookCatagory {
         public void setListImageHeight(int listImageHeight) {
             this.listImageHeight = listImageHeight;
         }
-
-    }
+*/
+}
 

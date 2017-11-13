@@ -1,9 +1,9 @@
-package com.disruptmidwest.one20.networking;
+package com.disruptmidwest.one20.service.repository;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.disruptmidwest.one20.model.OverviewResponse;
+import com.disruptmidwest.one20.service.model.OverviewResponse;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -19,6 +19,7 @@ import retrofit2.Response;
 @Singleton
 public class OverviewRepository {
     private BooksApi booksApi;
+
 
     @Inject
     public OverviewRepository(BooksApi booksApi) {
@@ -45,5 +46,7 @@ public class OverviewRepository {
 
 
     //TODO live data for details?
+
+
 
 }

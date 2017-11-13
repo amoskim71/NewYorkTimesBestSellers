@@ -1,4 +1,4 @@
-package com.disruptmidwest.one20.model;
+package com.disruptmidwest.one20.service.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Results {
-
+/*
     @SerializedName("bestsellers_date")
     @Expose
     private String bestsellersDate;
@@ -23,12 +23,13 @@ public class Results {
     private String previousPublishedDate;
     @SerializedName("next_published_date")
     @Expose
-    private String nextPublishedDate;
+    private String nextPublishedDate;*/
+
     @SerializedName("lists")
     @Expose
-    private java.util.List<com.disruptmidwest.one20.model.ListBookCatagory> lists = null;
+    public java.util.List<ListBookCatagory> lists;
 
-    public String getBestsellersDate() {
+  /*  public String getBestsellersDate() {
         return bestsellersDate;
     }
 
@@ -62,19 +63,19 @@ public class Results {
 
     public String getNextPublishedDate() {
         return nextPublishedDate;
-    }
+    }*/
 
-    public void setNextPublishedDate(String nextPublishedDate) {
+ /*   public void setNextPublishedDate(String nextPublishedDate) {
         this.nextPublishedDate = nextPublishedDate;
-    }
+    }*/
 
-    public java.util.List<com.disruptmidwest.one20.model.ListBookCatagory> getLists() {
+   /* public java.util.List<ListBookCatagory> getLists() {
         return lists;
     }
 
-    public void setLists(java.util.List<com.disruptmidwest.one20.model.ListBookCatagory> lists) {
+    public void setLists(java.util.List<ListBookCatagory> lists) {
         this.lists = lists;
-    }
+    }*/
 
 }
 

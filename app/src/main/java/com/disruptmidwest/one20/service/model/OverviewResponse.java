@@ -1,4 +1,4 @@
-package com.disruptmidwest.one20.model;
+package com.disruptmidwest.one20.service.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -9,19 +9,24 @@ import com.google.gson.annotations.SerializedName;
 
 public class OverviewResponse {
 
-        @SerializedName("status")
+/*        @SerializedName("status")
         @Expose
         private String status;
+
         @SerializedName("copyright")
         @Expose
         private String copyright;
+
         @SerializedName("num_results")
         @Expose
         private int numResults;
+        */
         @SerializedName("results")
         @Expose
-        private Results results;
+        public Results results;
 
+
+/*
         public String getStatus() {
             return status;
         }
@@ -44,15 +49,15 @@ public class OverviewResponse {
 
         public void setNumResults(int numResults) {
             this.numResults = numResults;
-        }
+        }*/
 
-        public Results getResults() {
+       /* public Results getResults() {
             return results;
         }
 
         public void setResults(Results results) {
             this.results = results;
-        }
+        }*/
 
 
 }
