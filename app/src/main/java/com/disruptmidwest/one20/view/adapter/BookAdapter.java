@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.disruptmidwest.one20.R;
-import com.disruptmidwest.one20.databinding.BookListItemBinding;
+import com.disruptmidwest.one20.databinding.ListItemCrimeBinding;
 import com.disruptmidwest.one20.service.model.ListBookCatagory;
 import com.disruptmidwest.one20.view.callback.BookClickCallback;
 
@@ -70,19 +70,22 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
 
     @Override
-    public BookAdapter.BookViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        BookListItemBinding binding = DataBindingUtil
-                .inflate(LayoutInflater.from(parent.getContext()), R.layout.book_list_item,
-                        parent, false);
+    public BookViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
 
-        binding.setCallback(bookClickCallback);
+        ListItemCrimeBinding binding = DataBindingUtil
+                .inflate(layoutInflater, R.layout.list_item_crime, parent, false);
+
+        // binding.setCallback(bookClickCallback);
+
 
         return new BookViewHolder(binding);
     }
 
+
     @Override
-    public void onBindViewHolder(BookAdapter.BookViewHolder holder, int position) {
-        holder.binding.setProject(bookList.get(position));
+    public void onBindViewHolder(BookViewHolder holder, int position) {
+        holder.binding.setBook(bookList.get(position));
         holder.binding.executePendingBindings();
 
     }
@@ -92,11 +95,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         return bookList == null ? 0 : bookList.size();
     }
 
-    public class BookViewHolder extends RecyclerView.ViewHolder {
+    static class BookViewHolder extends RecyclerView.ViewHolder {
+        final ListItemCrimeBinding binding;
 
-        final BookListItemBinding binding;
-
-        public BookViewHolder(BookListItemBinding binding) {
+        public BookViewHolder(ListItemCrimeBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }

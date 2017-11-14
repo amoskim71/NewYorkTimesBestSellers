@@ -36,6 +36,7 @@ public class BookListFragment extends Fragment implements Injectable {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_book_list, container, false);
+
         binding.bookList.setAdapter(bookAdapter);
         bookAdapter = new BookAdapter(bookClickCallback);
         binding.setIsLoading(true);
