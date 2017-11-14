@@ -18,6 +18,6 @@ public interface ViewModelSubComponent {
         ViewModelSubComponent build();
     }
 
-    BookListViewModel overViewViewModel();
+    BookListViewModel bookListViewModel();
     BookViewModel booksViewModel();
 }

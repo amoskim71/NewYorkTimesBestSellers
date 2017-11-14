@@ -32,7 +32,7 @@ public class BooksViewModelFactory implements ViewModelProvider.Factory {
         // View models cannot be injected directly because they won't be bound to the owner's
         // view model scope.
         creators.put(BookViewModel.class, () -> viewModelSubComponent.booksViewModel());
-        creators.put(BookViewModel.class, () -> viewModelSubComponent.overViewViewModel());
+        creators.put(BookListViewModel.class, () -> viewModelSubComponent.bookListViewModel());
 
     }
 

@@ -10,7 +10,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.disruptmidwest.one20.service.model.OverviewResponse;
-import com.disruptmidwest.one20.service.repository.OverviewRepository;
+import com.disruptmidwest.one20.service.repository.BooksRepository;
 
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
@@ -33,7 +33,7 @@ public class BookViewModel extends AndroidViewModel {
     public ObservableField<OverviewResponse> response = new ObservableField<>();
 
     @Inject
-    public BookViewModel(@NonNull OverviewRepository overviewRepository, @Nonnull  Application application) {
+    public BookViewModel(@NonNull BooksRepository booksRepository, @Nonnull  Application application) {
         super(application);
 
         this.booksID = new MutableLiveData<>();
@@ -45,7 +45,7 @@ public class BookViewModel extends AndroidViewModel {
             }
             Log.i(TAG, "ProjectViewModel projectID is" + booksID.getValue());
 
-            return overviewRepository.getOverview();
+            return booksRepository.getOverview();
         });
     }
 

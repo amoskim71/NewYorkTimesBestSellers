@@ -17,12 +17,12 @@ import retrofit2.Response;
  */
 
 @Singleton
-public class OverviewRepository {
+public class BooksRepository {
     private BooksApi booksApi;
 
 
     @Inject
-    public OverviewRepository(BooksApi booksApi) {
+    public BooksRepository(BooksApi booksApi) {
         this.booksApi = booksApi;
     }
 

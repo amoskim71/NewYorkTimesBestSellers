@@ -17,7 +17,7 @@ import dagger.android.support.HasSupportFragmentInjector;
 public class BookActivity extends AppCompatActivity implements HasSupportFragmentInjector {
 
     @Inject
-    DispatchingAndroidInjector<Fragment> dispatchingAndroidInjector;
+    DispatchingAndroidInjector<Fragment> androidInjector;
 
 
     @Override
@@ -35,7 +35,7 @@ public class BookActivity extends AppCompatActivity implements HasSupportFragmen
     }
 
     /** Shows the book detail Fragment */
-    public void show(OverviewResponse response){
+    /*public void show(OverviewResponse response){
         BookFragment bookFragment = BookFragment.forBook(response.results.lists.get(1).getListName());
 
         getSupportFragmentManager()
@@ -43,10 +43,10 @@ public class BookActivity extends AppCompatActivity implements HasSupportFragmen
                 .addToBackStack("project")
                 .replace(R.id.fragment_container,
                         bookFragment, null).commit();
-    }
+    }*/
 
     @Override
     public AndroidInjector<Fragment> supportFragmentInjector() {
-        return dispatchingAndroidInjector;
+        return androidInjector;
     }
 }

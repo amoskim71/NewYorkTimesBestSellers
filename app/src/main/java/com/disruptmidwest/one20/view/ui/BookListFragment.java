@@ -37,8 +37,8 @@ public class BookListFragment extends Fragment implements Injectable {
                              @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_book_list, container, false);
 
-        binding.bookList.setAdapter(bookAdapter);
         bookAdapter = new BookAdapter(bookClickCallback);
+        binding.bookList.setAdapter(bookAdapter);
         binding.setIsLoading(true);
 
         return binding.getRoot();
@@ -48,8 +48,7 @@ public class BookListFragment extends Fragment implements Injectable {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        final BookListViewModel viewModel = ViewModelProviders.of(this,
-                viewModelFactory).get(BookListViewModel.class);
+        final BookListViewModel viewModel = ViewModelProviders.of(this, viewModelFactory).get(BookListViewModel.class);
 
         observeViewModel(viewModel);
     }
@@ -71,7 +70,7 @@ public class BookListFragment extends Fragment implements Injectable {
         @Override
         public void onClick(OverviewResponse response) {
             if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
-                ((BookActivity) getActivity()).show(response);
+               // ((BookActivity) getActivity()).show(response);
             }
         }
     };

@@ -5,4 +5,6 @@ package com.disruptmidwest.one20.service.model;
  */
 
 public class BuyLinks {
+
+    //TODO finish creating pojo
 }

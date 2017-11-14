@@ -1,6 +1,6 @@
 project.ext {
     // …
-    dagger_version = "2.11"
+    dagger_version = "2.13"
 }
 
 apply plugin: 'com.android.application'
